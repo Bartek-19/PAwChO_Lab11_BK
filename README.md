@@ -18,15 +18,20 @@ docker run -dt --name web3 --network=lab11net --ip=10.0.1.5 -p 8003:80 --mount t
 
 ## Sprawdzenie działania z maszyny macierzystej
 web1: http://localhost:8001
+
 web2: http://localhost:8002
+
 web3: http://localhost:8003
 
 ## Instalacja narzędzia sprawdzającego w każdym z kontenerów
 docker exec -it web{X} /bin/bash (X - numer kontenera - 1, 2 lub 3)
+
 apt update
+
 apt install curl -y
 
 ## Sprawdzenie działania pozostałych kontenerów
 web1: curl http://10.0.1.4, curl http://10.0.1.5
+
 web2: curl http://10.0.1.3, curl http://10.0.1.5
 web3: curl http://10.0.1.3, curl http://10.0.1.4
