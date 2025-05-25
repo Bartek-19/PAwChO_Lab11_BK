@@ -34,4 +34,5 @@ apt install curl -y
 web1: curl http://10.0.1.4, curl http://10.0.1.5
 
 web2: curl http://10.0.1.3, curl http://10.0.1.5
+
 web3: curl http://10.0.1.3, curl http://10.0.1.4
